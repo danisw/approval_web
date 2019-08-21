@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>
+			tes socket
+		</title>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+	</head> 
+	<body>
+
+	<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+	</p>
+	<div id="container">
+	<div class="row">
+    <div class="col-sm-6" align="center">
+    <div class="card bg-primary text-white">
+		<div class="card-body">Read UID</div>
+	</div>
+			<table>
+			 <tr><td>&nbsp;</td></tr>
+			 <tr>
+				<td>UID</td>
+				<td>:&nbsp;</td>
+				<td id="uid"> {{ data }}</td>
+			</tr>
+			 <tr><td>&nbsp;</td></tr>
+			<tr>
+				<td>Nama</td>
+				<td>:&nbsp;</td>
+				<td>{{ row[0][1] }}</td>
+			</tr>
+			 <tr><td>&nbsp;</td></tr>
+			<tr>
+				<td>Tanggal</td>
+				<td>:&nbsp;</td>
+				<td>{{ row[0][2] }}</td>
+			</tr>
+			 <tr><td>&nbsp;</td></tr>
+			<tr>
+				<td>Qty Stock</td>
+				<td>:&nbsp;</td>
+				<td>{{ row[0][3] }} Karton</td>
+			</tr>
+			 <tr><td>&nbsp;</td></tr>
+			 <tr>
+			 	<td><button type="submit" value="Submit" onclick="location.reload();">Read</button></td>
+			 </tr>
+		</table>
+	</div>
+    <div class="col-sm-6" align="center">
+		<form method="POST" action="/write">
+			<div class="card bg-secondary text-white">
+				<div class="card-body">Write UID</div>
+			</div>
+			<dl>&nbsp;</dl>
+		    <dl>
+				<p>
+					<input name="inputUID" value="{{ data }}" type="text" placeholder="Uid" autocomplete="off" required>
+				</p>
+				<p>
+					<input name="inputProduk" value="" type="text" placeholder="Nama Produk" autocomplete="off" required>
+				</p>
+				<p>
+					<input name="inputStockMin" value="" type="text" placeholder="Stock Min" autocomplete="off" required>
+				</p>
+				<p>
+					<input name="inputStockPlus" value="" type="text" placeholder="Stock Plus" autocomplete="off" required>
+				</p>
+				<p>
+					<input name="inputUser" value="" type="text" placeholder="Nama Pengguna" autocomplete="off" required>
+				</p>
+		    </dl>
+	    <p>
+			<input type="submit" value="Submit">
+		</p>
+		</form>	
+	</div>
+	</div>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+   <!--  <script type="text/javascript">
+    	var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    </script> -->
+
+	</body>
+</html>
