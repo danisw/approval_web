@@ -23,30 +23,30 @@
             $level=$this->session->userdata('jabatan');
             switch($level){
             case $level == 1 : ?>
-                      <li class="active"><a href="<?=base_url()?>index.php/Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                     <li><a href="<?=base_url()?>index.php/Request/list_request"><i class="fa fa-reorder"></i> <span>Show Request</span></a></li>
-                      <li><a href="<?=base_url()?>index.php/Request/add_request"><i class="fa fa-plus"></i> <span>Add Request</span></a></li>
-                     <li><a href="<?=base_url()?>index.php/Request/approve_request"><i class="fa fa-reorder"></i> <span>Approve Request</span></a></li>
+                      <li class="active"><a href="<?=base_url()?>Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                     <li><a href="<?=base_url()?>Request/list_request"><i class="fa fa-reorder"></i> <span>Show Request</span></a></li>
+                      <li><a href="<?=base_url()?>Request/add_request"><i class="fa fa-plus"></i> <span>Add Request</span></a></li>
+                     <li><a href="<?=base_url()?>Request/approve_request"><i class="fa fa-reorder"></i> <span>Approve Request</span></a></li>
                      <?php ; break;
             case $level == 2 : ?>
-                    <li class="active"><a href="<?=base_url()?>index.php/Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                    <li><a href="<?=base_url()?>index.php/Request/list_request"><i class="fa fa-reorder"></i> <span>Show Request</span></a></li>
-                    <li><a href="<?=base_url()?>index.php/Request/add_request"><i class="fa fa-plus"></i> <span>Add Request</span></a></li>
+                    <li class="active"><a href="<?=base_url()?>Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="<?=base_url()?>Request/list_request"><i class="fa fa-reorder"></i> <span>Show Request</span></a></li>
+                    <li><a href="<?=base_url()?>Request/add_request"><i class="fa fa-plus"></i> <span>Add Request</span></a></li>
                    <?php ; break;
             case $level == 3 : ?>
-                    <li class="active"><a href="<?=base_url()?>index.php/Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                    <li><a href="<?=base_url()?>index.php/Request/list_request"><i class="fa fa-reorder"></i> <span>Show Request</span></a></li>
-                    <li><a href="<?=base_url()?>index.php/Request/add_request"><i class="fa fa-plus"></i> <span>Add Request</span></a></li>
+                    <li class="active"><a href="<?=base_url()?>Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="<?=base_url()?>Request/list_request"><i class="fa fa-reorder"></i> <span>Show Request</span></a></li>
+                    <li><a href="<?=base_url()?>Request/add_request"><i class="fa fa-plus"></i> <span>Add Request</span></a></li>
                    <?php ; break;
             case $level == 4 : ?>
-                    <li class="active"><a href="<?=base_url()?>index.php/Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                    <li><a href="<?=base_url()?>index.php/Request/list_request"><i class="fa fa-reorder"></i> <span>Show Request</span></a></li>
-                    <li><a href="<?=base_url()?>index.php/Request/add_request"><i class="fa fa-plus"></i> <span>Add Request</span></a></li>
-                   <li><a href="<?=base_url()?>index.php/Request/approve_request"><i class="fa fa-reorder"></i> <span>Approve Request</span></a></li>
-                   <li><a href="<?=base_url()?>index.php/Module/set_module"><i class="fa fa-reorder"></i> <span>Setting Module</span></a></li>
+                    <li class="active"><a href="<?=base_url()?>Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="<?=base_url()?>Request/list_request"><i class="fa fa-reorder"></i> <span>Show Request</span></a></li>
+                    <li><a href="<?=base_url()?>Request/add_request"><i class="fa fa-plus"></i> <span>Add Request</span></a></li>
+                   <li><a href="<?=base_url()?>Request/approve_request"><i class="fa fa-reorder"></i> <span>Approve Request</span></a></li>
+                   <li><a href="<?=base_url()?>Module/set_module"><i class="fa fa-reorder"></i> <span>Setting Module</span></a></li>
                    <?php ; break;
             default: ?> 
-                     <li class="active"><a href="<?=base_url()?>index.php/Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                     <li class="active"><a href="<?=base_url()?>Page"><i class="fa fa-home"></i> <span>Home</span></a></li>
             <?php ; break;
           }
         ?>
